@@ -1,7 +1,7 @@
-#include
-#include
-#include
-#include
+#include "hospital_app.h"
+#include "addpatient.h"
+#include "displaypatients.h"
+#include "searchpatient.h"
 
 int main() {
     int choice;
