@@ -1,4 +1,4 @@
-#inclue "hospital_app.h"
+#include "hospital_app.h"
 
 void addpatient() {
 if(num_patients<MAX_PATIENTS){
