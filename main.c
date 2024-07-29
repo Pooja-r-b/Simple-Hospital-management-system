@@ -1,7 +1,27 @@
 #include "hospital_app.h"
-#include "addpatient.h"
-#include "displaypatients.h"
-#include "searchpatient.h"
+#include "addpatient.c"
+#include "displaypatients.c"
+#include "searchpatient.c"
+
+int isAlphaString(const char* str) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (!isalpha(str[i])) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int isPositiveInteger(int num) {
+    return num > 0;
+}
+
+void clearInputBuffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) {
+        // Discard characters
+    }
+}
 
 int main() {
     int choice;
@@ -13,7 +33,11 @@ int main() {
         printf("3. Search Patient\n");
         printf("4. Exit\n");
         printf("Enter your choice: ");
-        scanf("%d", &choice);
+        if (scanf("%d", &choice) != 1) {
+            printf("Invalid input. Please enter a number.\n");
+            clearInputBuffer();  // Clear the invalid input
+            continue;  // Skip to the next iteration of the loop
+        }
         
         switch(choice) {
             case 1:
