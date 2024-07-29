@@ -21,7 +21,7 @@ if (num_patients < MAX_PATIENTS) {
                 printf("Invalid age. Please enter a positive integer.\n");
                 clearInputBuffer();  // Clear the invalid input
             }
-        } while (!isPositiveInteger(newPatient.age));
+        } while (!isPositiveInteger(newpatient.age));
 
         // Get and validate patient gender
         do {
