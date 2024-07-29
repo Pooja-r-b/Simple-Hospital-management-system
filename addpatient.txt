@@ -1,8 +1,9 @@
 #include "hospital_app.h"
 
 void addpatient() {
-if (numPatients < MAX_PATIENTS) {
-        struct Patient newPatient;
+
+if (num_patients < MAX_PATIENTS) {
+        struct Patient newpatient;
 
         // Get and validate patient name
         do {
