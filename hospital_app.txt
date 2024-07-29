@@ -3,7 +3,11 @@
 #define MAX_PATIENTS 100
 #include <stdio.h>
 #include <string.h>
-
+#include <ctype.h>
+#include <stdlib.h>
+int isAlphaString(const char* str);
+int isPositiveInteger(int num);
+void clearInputBuffer(void);
 void addpatient();
 void displaypatients();
 void searchpatient();
